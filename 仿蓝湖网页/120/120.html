@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>侧边导航栏</title>
+    <!-- 引入字体图标 -->
+    <link rel="stylesheet" href="fonts/font.css">
+    <link rel="stylesheet" href="120.css">
+    <link rel="stylesheet" type="text/css" href="../css/悬浮窗口.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/100.css"/>
+    <script type="text/javascript" src="../jquery-2.2.0.min.js" ></script>
+    <script type="text/javascript" src="../js/悬浮窗口.js" ></script>
+</head>
+
+<body>
+	    <div class="tou">
+    		<div class="user-info">
+                <img src="../img/92f218aa3de2a80a5084181c505782f.png" alt="">
+                <span>臭豆腐</span>
+                <i class="icon icon-gear"></i>
+            </div>
+            <!--搜索-->
+             <div class="search-box" style="color: #6583eb;">
+             	瞅啥呢？想找啥这里有~~~~ao <img src="../img/92f218aa3de2a80a5084181c505782f.png"style="width: 1.5rem ; height: 1.3rem;"/ >
+               <input type="text" class="search-txt" placeholder="想搜啥?" />
+               <a class="search-btn"><i class="icon icon-search" aria-hidden="true"></i></a>
+             </div>
+             <div class="top-you">
+             	<div class="ybiao">
+             		<img src="../img/master_go.529dd3fa.svg"/>
+             	</div>
+             	<div class="ybiao">
+             		<i class="icon icon-file"></i>
+             	</div>
+             	<div class="ybiao">
+             		<i class="icon icon-album"></i>
+             	</div>
+             	<div class="ybiao">
+             		 <i class="icon icon-like"></i>
+             	</div>
+             	<div class="ybiao">
+             		 <i class="icon icon-vault"></i>
+             	</div>
+             	
+             </div>
+    	</div>
+    <div class="container">
+    	
+        <div class="left-box">
+            <ul>
+                <li class="item active">
+                    <i class="icon icon-file"></i>
+                    主页
+                </li>
+                <li class="item">
+                    <i class="icon icon-album"></i>
+                    邀请成员
+                </li>
+                <li class="item">
+                    <i class="icon icon-like"></i>
+                    设计规范
+                </li>
+                <li class="item">
+                    <i class="icon icon-vault"></i>
+                    超级文档
+                </li>
+                <li class="item">
+                    <i class="icon icon-favorite"></i>
+                                        团队设置
+                </li>
+                <li class="item">
+                    <i class="icon icon-transfer"></i>
+                                        立即升级
+                </li>     
+            </ul>
+            <div class="xmys">
+            	团队文件
+            	<li class="item">
+                    <img src="../img/dc_prj.8ef4ddf0.svg"/>
+                                         项目演示
+                </li>
+            </div>
+            <div class="huishou">
+            	<li class="item">
+                    <i class="icon icon-trash"></i>
+                                         回收站
+                </li>
+            </div>
+        </div>
+        <div class="right-box">
+            <div class="top">
+                <span class="current-tag">
+                	<!--设计项目-->
+                	<a href="javascript:void(0)" onclick="displayWindow()">
+                		<div class="sjxm">
+                	        <div class="s-1">
+                	            <img src="../img/dc_prj.8ef4ddf0.svg"/>
+                	        </div>
+                	        <div class="s-1">
+                	                      设计项目
+                	        </div>
+                	        <div class="s-1">
+                	            <i class="icon icon-add"></i>
+                	        </div>
+                	    </div>
+                	</a>
+                	<!--超级文档-->
+                	<a href= "https://lanhuapp.com/docs/#/d/d631ab1ac6c9ef84ec22db442?from=project&type=independent&blank=1">
+                		<div class="sjxm">
+                	        <div class="s-1">
+                	            <img src="../img/dc_prj.8ef4ddf0.svg"/>
+                	        </div>
+                	        <div class="s-1">
+                	                      超级文档
+                	        </div>
+                	        <div class="s-1">
+                	            <i class="icon icon-add"></i>
+                	        </div>
+                	    </div>
+                	</a>
+                	<!--文件夹-->
+                	<a href="javascript:void(0)" onclick="displayWindow2()">
+                		<div class="sjxm">
+                	        <div class="s-1">
+                	            <img src="../img/dc_prj.8ef4ddf0.svg"/>
+                	        </div>
+                	        <div class="s-1">
+                	                      文件夹
+                	        </div>
+                	        <div class="s-1">
+                	            <i class="icon icon-add"></i>
+                	        </div>
+                	    </div>
+                	</a>
+  	
+                	<!--悬浮窗口-->
+				  <div id="window" class="window_css">
+				   <a href="javascript:void(0)" onclick="hideWindow()">
+				    <div style="text-align: center;font-size: 2rem;">啥也没有，哈哈哈哈哈！！！</div >			    	
+				   </a>
+				  </div>
+				  <!--出现悬浮窗口后,背景变暗-->
+				  <div id="shadow" class="shadow_css"></div>
+				  
+				  <!--第二个悬浮窗口-->
+				  <div id="window2" class="window_css">
+				  	<div class="tdejone1" >团队文件</div>
+				  	<div class="tdejone"><input type="text"placeholder="文件夹名称" id="tdwj" value=""/></div>
+				   <a href="javascript:void(0)" onclick="hideWindow2()">
+				    <div style="text-align: center;font-size: 1.5rem; position: absolute;top: 20rem;left: 20rem;">取消&nbsp;&nbsp;确定</div >			    	
+				   </a>
+				  </div>
+				  <!--出现悬浮窗口后,背景变暗-->
+				  <div id="shadow2" class="shadow_css"></div> 
+                </span>
+                <div class="btn">
+                    <i class="icon icon-search"></i>
+                </div>
+                <div class="btn">
+                    <i class="icon icon-add"></i>
+                </div>
+            </div>
+             <!--资源广场-->
+				  <div class="zygc">
+				  	<div class="zygc-z">
+				  		<div style="color: black;font-size: 1.1rem;">资源广场</div>
+				  		<div class="zygc-y">
+				  			<div class="y-img"> <a href="https://mastergo.com/files/home?utm_source=lanhu&utm_medium=banner"><img src="../img/template1.jpg"/></a></div>
+				  			<div class="y-img"> <img src="../img/template2.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template3.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template4.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template5-1.png"/></div>
+				  			<div class="y-img"> <img src="../img/template6.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template7.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template8.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template9.jpg"/></div>
+				  			<div class="y-img"> <img src="../img/template10.jpg"/></div>
+				  		</div>
+				  	</div>
+				  </div>
+            <!--<div class="middle">哈哈哈哈哈</div>-->
+           <div class="dibu">
+			<div class="xiala">
+				<div class="dropdown-container">
+					<button class="dropdown-button main-button">
+		            <span class="dropdown-title text-truncate">全部文件</span>
+		            <span class="dropdown-arrow">
+		                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+		                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+		                </svg>
+		            </span>
+		        </button>
+					<div class="dropdown-list-container">
+						<div class="dropdown-list-wrapper">
+							<ul class="dropdown-list"></ul>
+							<div class="floating-icon" aria-hidden="true"></div>
+						</div>
+					</div>
+				</div>
+            		<div class="xia2">
+            			默认 <!--<img src="../img/e11465a55a171e337196a6cf7352bc2.png"/>-->
+            		</div>
+            </div>
+            	<!--<div class="handler"></div>-->
+            	<!--<div db-lie>
+            		<div class=""style="width: 10rem; height: 10rem;background-color: ;">
+            			
+            		</div>
+            	</div>-->
+            </div>
+        </div>
+    </div>
+    <script src="../javascript/100.js"></script>
+    <script src="120.js"></script>
+</body>
+
+</html>

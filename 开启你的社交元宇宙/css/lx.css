@@ -1,0 +1,26 @@
+
+.van-field__control{
+  font-size: 16px;
+  margin-left: 15px;
+}
+.situLogo{
+  margin:40px auto;
+  width:218px;
+  height:108px;
+}
+.getCode{
+  border-radius: 10px;
+}
+.FormSubmit{
+  margin-top: 55px;
+}
+.van-button{
+  background: #3A6DD4;
+}
+.footCar{
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+
